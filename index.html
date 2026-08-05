@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="1САЙТ — студия веб-разработки в Махачкале. Делаем сайты и лендинги для малого бизнеса на HTML, CSS и JavaScript."
+    >
+
+    <title>1САЙТ — Web Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <canvas id="particles"></canvas>
+
+
+    <header class="header">
+
+        <div class="container header-inner">
+
+            <a href="#home" class="logo">
+                <img src="logo.jpg" alt="1САЙТ" class="logo-mark">
+                1САЙТ
+            </a>
+
+
+            <nav class="nav" id="nav">
+
+                <a href="#home">Главная</a>
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#services">Услуги</a>
+                <a href="#projects">Проекты</a>
+                <a href="#contacts">Контакты</a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="theme-button"
+                    id="themeButton"
+                    aria-label="Переключить тему"
+                >
+                    ☀
+                </button>
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="hero-info reveal">
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        Открыт для новых проектов
+                    </div>
+
+
+                    <p class="hero-small">
+                        СТУДИЯ ВЕБ-РАЗРАБОТКИ
+                    </p>
+
+
+                    <h1>
+                        1САЙТ<span>.</span>
+                    </h1>
+
+
+                    <h2>
+                        Делаю <span id="typing"></span>
+                    </h2>
+
+
+                    <p class="hero-description">
+                        Собираю аккуратные сайты и лендинги для малого бизнеса —
+                        кафе, салонов, мастерских. Учусь на реальных задачах
+                        и довожу каждый проект до запуска.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="button primary-button">
+                            Смотреть проекты
+                            <span>→</span>
+                        </a>
+
+
+                        <a href="#contacts" class="button secondary-button">
+                            Обсудить сайт
+                        </a>
+
+                    </div>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://github.com/rasulovking2577"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                        <span></span>
+
+                        <p>МАХАЧКАЛА</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card reveal">
+
+                    <div class="code-window">
+
+                        <div class="window-top">
+
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <p>project.js</p>
+
+                        </div>
+
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="code-purple">const</span>
+                                client =
+                                <span class="code-accent">"кафе / салон / бизнес"</span>;
+                            </p>
+
+                            <p>
+                                <span class="code-purple">const</span>
+                                stack = [
+                            </p>
+
+                            <p class="indent">
+                                <span class="code-accent">"HTML"</span>,
+                            </p>
+
+                            <p class="indent">
+                                <span class="code-accent">"CSS"</span>,
+                            </p>
+
+                            <p class="indent">
+                                <span class="code-accent">"JavaScript"</span>
+                            </p>
+
+                            <p>];</p>
+
+                            <br>
+
+                            <p>
+                                <span class="code-purple">function</span>
+                                buildSite(client) {
+                            </p>
+
+                            <p class="indent">
+                                design();
+                            </p>
+
+                            <p class="indent">
+                                code();
+                            </p>
+
+                            <p class="indent">
+                                launch();
+                            </p>
+
+                            <p>}</p>
+
+                            <div class="code-cursor"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scroll-down">
+                <span>SCROLL</span>
+                <div></div>
+            </div>
+
+        </section>
+
+
+
+        <section class="section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">ОБО МНЕ</p>
+
+                    <h2>
+                        Как я <span>работаю</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text reveal">
+
+                        <p class="large-text">
+                            Я самоучка из Махачкалы, который
+                            <span>превращает изучение веб-разработки</span>
+                            в реальные сайты для реальных заказчиков.
+                        </p>
+
+
+                        <p>
+                            Изучаю HTML, CSS и JavaScript не по учебникам,
+                            а на настоящих задачах — беру проект и разбираюсь
+                            по ходу дела, если чего-то не знаю.
+                        </p>
+
+
+                        <p>
+                            Мне важно не количество, а результат: сайт должен
+                            грузиться быстро, нормально выглядеть на телефоне
+                            и решать задачу клиента — привести заявки, показать
+                            меню, дать возможность забронировать столик.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-stats reveal">
+
+                        <div class="stat-card">
+                            <strong>3</strong>
+                            <span>Технологии в работе: HTML, CSS, JS</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <strong>&lt;24ч</strong>
+                            <span>Обычно отвечаю в течение дня</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <strong>100%</strong>
+                            <span>Личное участие в каждом заказе</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <strong>MHC</strong>
+                            <span>Работаю удалённо по всей России</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section skills-section" id="skills">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">НАВЫКИ</p>
+
+                    <h2>
+                        Технологии, <span>которыми пользуюсь</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-list">
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-header">
+
+                            <div>
+                                <h3>HTML</h3>
+                            </div>
+
+                            <span class="skill-percent">Уверенно</span>
+
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div
+                                class="skill-progress"
+                                data-width="90%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-header">
+
+                            <div>
+                                <h3>CSS</h3>
+                            </div>
+
+                            <span class="skill-percent">Уверенно</span>
+
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div
+                                class="skill-progress"
+                                data-width="85%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-header">
+
+                            <div>
+                                <h3>JavaScript</h3>
+                            </div>
+
+                            <span class="skill-percent">Развиваю</span>
+
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div
+                                class="skill-progress"
+                                data-width="65%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill reveal">
+
+                        <div class="skill-header">
+
+                            <div>
+                                <h3>Git / GitHub</h3>
+                            </div>
+
+                            <span class="skill-percent">Базово</span>
+
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div
+                                class="skill-progress"
+                                data-width="70%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">УСЛУГИ</p>
+
+                    <h2>
+                        Чем могу <span>помочь</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Беру задачи под конкретную цель — не просто «сделать сайт»,
+                        а решить, зачем он нужен бизнесу.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+
+                        <div class="service-icon">01</div>
+
+                        <h3>Сайт-визитка</h3>
+
+                        <p>
+                            Одностраничный сайт с меню, фото, адресом
+                            и кнопкой связи — чтобы вас находили в поиске
+                            и на картах.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-icon">02</div>
+
+                        <h3>Лендинг под заявки</h3>
+
+                        <p>
+                            Страница под конкретное предложение —
+                            с формой заявки, кнопкой WhatsApp
+                            и понятной структурой.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-icon">03</div>
+
+                        <h3>Доработка сайта</h3>
+
+                        <p>
+                            Если сайт уже есть, но выглядит устаревшим
+                            или плохо открывается с телефона — обновлю
+                            дизайн и адаптивность.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">ПРОЕКТЫ</p>
+
+                    <h2>
+                        Что я <span>уже сделал</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Портфолио пополняется — сюда будут добавляться
+                        сайты, которые я делаю для клиентов.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            &lt;/&gt;
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <p class="project-label">
+                                ГОТОВО
+                            </p>
+
+                            <h3>
+                                Этот сайт
+                            </h3>
+
+                            <p>
+                                Личное портфолио — верстал сам, от структуры
+                                до анимаций, на чистом HTML/CSS/JS.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+
+                            <a
+                                href="https://github.com/rasulovking2577"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-arrow"
+                                aria-label="Открыть на GitHub"
+                            >
+                                ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card reveal">
+
+                        <div class="project-icon">
+                            { }
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <p class="project-label">
+                                В РАБОТЕ
+                            </p>
+
+                            <h3>
+                                Сайт для кафе
+                            </h3>
+
+                            <p>
+                                Лендинг с меню, фотогалереей и картой —
+                                первый заказ от реального клиента.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+
+                            <span class="project-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="project-card project-card-cta reveal">
+
+                        <div class="project-icon">
+                            +
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <p class="project-label">
+                                СВОБОДНОЕ МЕСТО
+                            </p>
+
+                            <h3>
+                                Ваш проект
+                            </h3>
+
+                            <p>
+                                Следующий кейс в портфолио может быть
+                                вашим сайтом.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+                            <a href="#contacts" class="button secondary-button" style="padding: 10px 16px; font-size: 12px;">
+                                Обсудить
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section contact-section" id="contacts">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <p class="section-number">
+                        КОНТАКТЫ
+                    </p>
+
+
+                    <h2>
+                        Давай создадим
+                        <span>что-нибудь крутое.</span>
+                    </h2>
+
+
+                    <p>
+                        Расскажите, какой сайт вам нужен — отвечу в течение дня
+                        и предложу решение под вашу задачу и бюджет.
+                    </p>
+
+
+                    <div class="contact-methods">
+
+                        <a
+                            href="tel:+79696656414"
+                            class="button primary-button"
+                        >
+                            Позвонить
+                            <span>+7 969 665-64-14</span>
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/79696656414"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button secondary-button"
+                        >
+                            Написать в WhatsApp
+                        </a>
+
+
+                        <a
+                            href="https://github.com/rasulovking2577"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button secondary-button"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <a href="#home" class="logo">
+                <img src="logo.jpg" alt="1САЙТ" class="logo-mark">
+                1САЙТ
+            </a>
+
+
+            <p>
+                Designed & built by 1САЙТ
+            </p>
+
+
+            <a href="tel:+79696656414">
+                +7 969 665-64-14
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
