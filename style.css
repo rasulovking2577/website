@@ -1309,7 +1309,8 @@ body.light .header {
 
 
 .footer-inner p,
-.footer-inner > a:last-child {
+.footer-inner a[href^="tel:"],
+.footer-inner a[href*="instagram"] {
     color: var(--text-faint);
 
     font-family: var(--mono);
@@ -1318,7 +1319,8 @@ body.light .header {
 }
 
 
-.footer-inner > a:last-child:hover {
+.footer-inner a[href^="tel:"]:hover,
+.footer-inner a[href*="instagram"]:hover {
     color: var(--accent);
 }
 
@@ -1375,8 +1377,375 @@ body.light .header {
 
 
 /* =========================
-   MOBILE
+   PROCESS
 ========================= */
+
+.process-list {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.process-step {
+    padding: 26px 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.process-step:hover {
+    border-color: var(--accent);
+
+    transform: translateY(-5px);
+}
+
+
+.process-num {
+    font-family: var(--display);
+
+    font-size: 30px;
+
+    color: var(--accent);
+
+    margin-bottom: 16px;
+}
+
+
+.process-text h3 {
+    font-family: var(--display);
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.process-text p {
+    color: var(--text-dim);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+.pricing-card {
+    position: relative;
+
+    padding: 34px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent);
+}
+
+
+.pricing-featured {
+    border-color: var(--accent);
+
+    background: linear-gradient(180deg, var(--accent-soft), var(--surface) 40%);
+}
+
+
+.pricing-badge {
+    position: absolute;
+
+    top: -13px;
+    right: 24px;
+
+    background: var(--accent);
+
+    color: #0f1830;
+
+    font-family: var(--mono);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+}
+
+
+.pricing-card h3 {
+    font-family: var(--display);
+
+    font-size: 20px;
+}
+
+
+.pricing-value {
+    font-family: var(--display);
+
+    font-size: 28px;
+
+    color: var(--accent);
+}
+
+
+.pricing-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    flex-grow: 1;
+}
+
+
+.pricing-list li {
+    color: var(--text-dim);
+
+    font-size: 13px;
+
+    padding-left: 18px;
+
+    position: relative;
+}
+
+
+.pricing-list li::before {
+    content: "—";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--accent);
+}
+
+
+.pricing-card .button {
+    justify-content: center;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 750px;
+}
+
+
+.faq-item {
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: var(--surface);
+}
+
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 20px 22px;
+
+    background: none;
+
+    border: none;
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.faq-icon {
+    flex-shrink: 0;
+
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    color: var(--accent);
+
+    font-size: 15px;
+
+    transition: transform 0.3s;
+}
+
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+
+.faq-answer {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.35s ease, padding 0.35s ease;
+
+    padding: 0 22px;
+}
+
+
+.faq-item.open .faq-answer {
+    max-height: 220px;
+
+    padding: 0 22px 20px;
+}
+
+
+.faq-answer p {
+    color: var(--text-dim);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 520px;
+
+    margin-bottom: 30px;
+}
+
+
+.form-row {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    background: var(--surface-2);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: 14px;
+
+    resize: vertical;
+
+    transition: border-color 0.3s;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+
+    border-color: var(--accent);
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-faint);
+}
+
+
+.contact-form button {
+    align-self: flex-start;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+
 
 @media (max-width: 900px) {
 
@@ -1442,6 +1811,12 @@ body.light .header {
 
     .projects-grid,
     .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .process-list,
+    .pricing-grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1531,6 +1906,24 @@ body.light .header {
     .projects-grid,
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+
+    .process-list,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
+        flex-direction: column;
+    }
+
+
+    .faq-question {
+        font-size: 14px;
+
+        padding: 16px 18px;
     }
 
 
