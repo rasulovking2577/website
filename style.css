@@ -1745,6 +1745,165 @@ body.light .header {
 }
 
 
+/* =========================
+   SCROLL PROGRESS
+========================= */
+
+.scroll-progress {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    height: 3px;
+    width: 0%;
+
+    background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+
+    z-index: 2000;
+
+    transition: width 0.1s ease-out;
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: #0f1830;
+
+    border: none;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+
+    transform: translateY(15px) scale(0.9);
+
+    pointer-events: none;
+
+    transition: opacity 0.3s, transform 0.3s;
+
+    z-index: 900;
+}
+
+
+.back-to-top.visible {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+    pointer-events: auto;
+}
+
+
+.back-to-top:hover {
+    background: var(--accent-strong);
+
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+/* =========================
+   MOBILE CTA BAR
+========================= */
+
+.mobile-cta-bar {
+    display: none;
+}
+
+
+/* =========================
+   BUTTON RIPPLE + PULSE
+========================= */
+
+.button {
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.button .ripple {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: scale(0);
+
+    animation: ripple-anim 0.6s ease-out;
+
+    pointer-events: none;
+}
+
+
+@keyframes ripple-anim {
+
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+
+}
+
+
+.hero-buttons .primary-button {
+    animation: pulse-glow 2.6s ease-in-out infinite;
+}
+
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 10px 30px rgba(201, 162, 39, 0.18);
+    }
+
+    50% {
+        box-shadow: 0 10px 38px rgba(201, 162, 39, 0.42);
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-buttons .primary-button {
+        animation: none;
+    }
+
+    .button .ripple {
+        display: none;
+    }
+
+}
+
 
 
 @media (max-width: 900px) {
@@ -1938,6 +2097,63 @@ body.light .header {
         gap: 15px;
 
         align-items: flex-start;
+    }
+
+
+    body {
+        padding-bottom: 68px;
+    }
+
+
+    .mobile-cta-bar {
+        display: flex;
+
+        position: fixed;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        z-index: 950;
+
+        border-top: 1px solid var(--border);
+
+        background: var(--surface);
+    }
+
+
+    .mobile-cta-button {
+        flex: 1;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 16px 10px;
+
+        color: var(--text);
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+
+    .mobile-cta-accent {
+        background: var(--accent);
+
+        color: #0f1830;
+    }
+
+
+    .back-to-top {
+        right: 16px;
+        bottom: 76px;
+
+        width: 42px;
+        height: 42px;
     }
 
 }
