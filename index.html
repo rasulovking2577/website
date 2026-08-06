@@ -34,6 +34,8 @@
 
 <body>
 
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <div class="cursor-glow"></div>
 
     <canvas id="particles"></canvas>
@@ -315,7 +317,7 @@
                     <div class="about-stats reveal">
 
                         <div class="stat-card">
-                            <strong>3</strong>
+                            <strong data-count="3">0</strong>
                             <span>Технологии в работе: HTML, CSS, JS</span>
                         </div>
 
@@ -325,7 +327,7 @@
                         </div>
 
                         <div class="stat-card">
-                            <strong>100%</strong>
+                            <strong data-count="100" data-suffix="%">0%</strong>
                             <span>Личное участие в каждом заказе</span>
                         </div>
 
@@ -1080,6 +1082,16 @@
                         </a>
 
 
+                        <button
+                            type="button"
+                            class="button secondary-button"
+                            id="copyPhoneButton"
+                            data-phone="+7 969 665-64-14"
+                        >
+                            Скопировать номер
+                        </button>
+
+
                         <a
                             href="https://www.instagram.com/rasul387800"
                             target="_blank"
@@ -1147,6 +1159,37 @@
 
     </footer>
 
+
+
+    <!-- =========================
+         FLOATING UI
+    ========================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Наверх"
+    >
+        ↑
+    </button>
+
+
+    <div class="mobile-cta-bar">
+
+        <a href="tel:+79696656414" class="mobile-cta-button">
+            📞 Позвонить
+        </a>
+
+        <a
+            href="https://wa.me/79696656414"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-cta-button mobile-cta-accent"
+        >
+            WhatsApp
+        </a>
+
+    </div>
 
 
     <script src="script.js"></script>
