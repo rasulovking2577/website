@@ -1,1051 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-  <title>1САЙТ — современные сайты для бизнеса</title>
-
-  <meta name="description"
-        content="1САЙТ — разработка современных сайтов и лендингов для бизнеса. Быстрые, адаптивные сайты на HTML, CSS и JavaScript. Махачкала и вся Россия.">
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical"
-        href="https://rasulovking2577.github.io/">
-
-  <meta name="theme-color" content="#08090b">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title"
-        content="1САЙТ — сайт, который работает на ваш бизнес">
-  <meta property="og:description"
-        content="Современные сайты, лендинги и редизайн для малого бизнеса.">
-  <meta property="og:url"
-        content="https://rasulovking2577.github.io/">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title"
-        content="1САЙТ — сайты для бизнеса">
-  <meta name="twitter:description"
-        content="Создаю современные сайты и лендинги под задачи бизнеса.">
-
-  <link rel="icon" href="logo.jpg">
-
-  <!-- Fonts -->
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1САЙТ — сайты для бизнеса | Махачкала</title>
+<meta name="description" content="Создаю сайты для кафе, барбершопов, магазинов и локального бизнеса. Портфолио и заказ в WhatsApp.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--card:#141414;--text:#f4f4f4;--muted:#888;--acc:#fff;--line:rgba(255,255,255,.08);
+  --s:Syne,system-ui,sans-serif;--b:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1080px,calc(100% - 32px));margin:0 auto}
+.hd{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-family:var(--s);font-weight:800;font-size:1.05rem}
+.hd-cta{font-size:.8rem;font-weight:600;background:#fff;color:#0a0a0a;padding:10px 14px;border-radius:6px}
+.hero{padding:120px 0 56px}
+.hero .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.hero h1{font-family:var(--s);font-size:clamp(2.4rem,7vw,3.6rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:14px}
+.hero p{color:var(--muted);max-width:38ch;font-size:1.05rem;margin-bottom:26px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;font-weight:600;font-size:.9rem;border-radius:6px}
+.btn-m{background:#fff;color:#0a0a0a}
+.btn-g{border:1px solid var(--line)}
+.sec{padding:56px 0}
+.sec h2{font-family:var(--s);font-size:clamp(1.5rem,4vw,2rem);font-weight:700;margin-bottom:8px}
+.sec .s{color:var(--muted);margin-bottom:24px}
+.works{display:grid;gap:12px}
+@media(min-width:640px){.works{grid-template-columns:1fr 1fr}}
+.work{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .2s,transform .2s}
+.work:hover{border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
+.work .k{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.work h3{font-family:var(--s);font-size:1.25rem;margin-bottom:6px}
+.work p{color:var(--muted);font-size:.9rem}
+.work .go{margin-top:14px;font-size:.85rem;font-weight:600}
+.grid3{display:grid;gap:12px}
+@media(min-width:700px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{font-family:var(--s);font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9rem}
+.final{text-align:center;padding:64px 0;border-top:1px solid var(--line)}
+.final h2{font-family:var(--s);font-size:clamp(1.7rem,4vw,2.2rem);font-weight:700;margin-bottom:10px}
+.final p{color:var(--muted);margin-bottom:22px}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;padding:12px 16px;background:rgba(10,10,10,.95);border-top:1px solid var(--line);z-index:30}
+.sticky .btn{width:100%}
+@media(max-width:720px){.sticky{display:block}body{padding-bottom:80px}}
+footer{padding:24px 0 90px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.8rem;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s,transform .55s}
+.reveal.on{opacity:1;transform:none}
+</style>
 </head>
-
 <body>
-
-<!-- ================= PRELOADER ================= -->
-
-<div class="loader" id="loader">
-  <div class="loader-logo">1САЙТ<span>.</span></div>
-  <div class="loader-line">
-    <span></span>
-  </div>
-</div>
-
-<!-- ================= CURSOR ================= -->
-
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<!-- ================= PROGRESS ================= -->
-
-<div class="progress" id="progress"></div>
-
-<!-- ================= HEADER ================= -->
-
-<header class="header" id="header">
-
-  <div class="header-inner">
-
-    <a href="#home" class="brand">
-      <span class="brand-mark">1</span>
-      <span>САЙТ</span>
-    </a>
-
-    <nav class="nav">
-      <a href="#services">Услуги</a>
-      <a href="#work">Проекты</a>
-      <a href="#process">Процесс</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <div class="header-actions">
-
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        aria-label="Переключить тему"
-        type="button">
-        ☼
-      </button>
-
-      <a
-        href="#contacts"
-        class="btn btn-small btn-primary">
-        Обсудить проект
-      </a>
-
-      <button
-        class="hamburger"
-        id="hamburger"
-        type="button"
-        aria-label="Меню">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-    </div>
-
-  </div>
-
+<header class="hd">
+  <a class="logo" href="#">1САЙТ</a>
+  <a class="hd-cta" href="https://wa.me/79696656414?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BD%D1%83%D0%B6%D0%B5%D0%BD%20%D1%81%D0%B0%D0%B9%D1%82" target="_blank" rel="noopener">WhatsApp</a>
 </header>
 
-<!-- ================= MOBILE MENU ================= -->
+<section class="hero wrap">
+  <p class="tag reveal">Махачкала · сайты для бизнеса</p>
+  <h1 class="reveal">Сайты, после которых<br>пишут в WhatsApp</h1>
+  <p class="reveal">Делаю сайты для кафе, барбершопов, магазинов и локального бизнеса. Понятно, с телефона, без лишнего.</p>
+  <div class="acts reveal">
+    <a class="btn btn-m" href="#work">Смотреть работы</a>
+    <a class="btn btn-g" href="https://wa.me/79696656414?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5" target="_blank" rel="noopener">Обсудить проект</a>
+  </div>
+</section>
 
-<div class="mobile-menu" id="mobileMenu">
-
-  <div class="mobile-menu-inner">
-
-    <a href="#services">Услуги</a>
-    <a href="#work">Проекты</a>
-    <a href="#process">Процесс</a>
-    <a href="#about">Обо мне</a>
-    <a href="#faq">FAQ</a>
-
-    <a
-      href="#contacts"
-      class="btn btn-primary">
-      Обсудить проект
+<section class="sec wrap" id="work">
+  <h2 class="reveal">Работы</h2>
+  <p class="s reveal">Реальные проекты — можно открыть</p>
+  <div class="works">
+    <a class="work reveal" href="https://rasulovking2577.github.io/SAKLYA/" target="_blank" rel="noopener">
+      <div class="k">Кафе</div>
+      <h3>САКЛЯ</h3>
+      <p>Сайт кафе: атмосфера, меню, заказ в WhatsApp.</p>
+      <div class="go">Открыть →</div>
     </a>
-
-  </div>
-
-</div>
-
-<!-- ================= MAIN ================= -->
-
-<main>
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-  <div class="hero-grid-bg"></div>
-
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-
-  <div class="container hero-container">
-
-    <div class="hero-content reveal">
-
-      <div class="status">
-        <span class="status-dot"></span>
-        Открыт для новых проектов
-      </div>
-
-      <div class="hero-label">
-        WEB DEVELOPMENT · МАХАЧКАЛА
-      </div>
-
-      <h1>
-
-        Сайт, который
-        <span>выглядит дорого</span>
-        и помогает бизнесу.
-
-      </h1>
-
-      <p class="hero-description">
-
-        Создаю современные сайты и лендинги для малого бизнеса.
-        Дизайн, разработка, адаптация под телефон и запуск —
-        всё в одном месте.
-
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="#contacts"
-          class="btn btn-primary btn-large magnetic">
-
-          Обсудить проект
-          <span>↗</span>
-
-        </a>
-
-        <a
-          href="#work"
-          class="btn btn-outline btn-large">
-
-          Смотреть проекты
-          <span>↓</span>
-
-        </a>
-
-      </div>
-
-      <div class="hero-trust">
-
-        <div>
-          <strong>HTML</strong>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-
-        <div>
-          <span>Адаптивно</span>
-          <span>Быстро</span>
-          <span>Без шаблонов</span>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- HERO CARD -->
-
-    <div class="hero-visual reveal reveal-delay">
-
-      <div class="floating-card card-top">
-        <span class="mini-dot"></span>
-        Ваш бизнес
-      </div>
-
-      <div class="browser">
-
-        <div class="browser-top">
-
-          <div class="browser-dots">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-
-          <div class="browser-url">
-            your-business.ru
-          </div>
-
-        </div>
-
-        <div class="browser-screen">
-
-          <div class="mock-nav">
-            <strong>BRAND</strong>
-
-            <div>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
-          <div class="mock-content">
-
-            <small>ВАШ БИЗНЕС</small>
-
-            <h3>
-              Сайт,
-              который
-              <em>продаёт.</em>
-            </h3>
-
-            <div class="mock-button">
-              Узнать больше →
-            </div>
-
-          </div>
-
-          <div class="mock-stats">
-
-            <div>
-              <b>24/7</b>
-              <span>онлайн</span>
-            </div>
-
-            <div>
-              <b>100%</b>
-              <span>адаптив</span>
-            </div>
-
-            <div>
-              <b>1×</b>
-              <span>решение</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="floating-card card-bottom">
-        <span>⚡</span>
-        Быстрая загрузка
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <i></i>
-  </div>
-
-</section>
-
-<!-- ================= MARQUEE ================= -->
-
-<section class="marquee">
-
-  <div class="marquee-track">
-
-    <span>WEB DESIGN</span>
-    <b>✦</b>
-    <span>DEVELOPMENT</span>
-    <b>✦</b>
-    <span>LANDING PAGES</span>
-    <b>✦</b>
-    <span>HTML CSS JS</span>
-    <b>✦</b>
-    <span>WEB DESIGN</span>
-    <b>✦</b>
-    <span>DEVELOPMENT</span>
-    <b>✦</b>
-
-  </div>
-
-</section>
-
-<!-- ================= PROBLEM ================= -->
-
-<section class="section problem" id="about">
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <span class="eyebrow">ПРОБЛЕМА</span>
-
-      <h2>
-        Клиент должен
-        понять вас
-        <span>за несколько секунд.</span>
-      </h2>
-
-    </div>
-
-    <div class="problem-grid">
-
-      <div class="problem-main reveal">
-
-        <div class="big-number">01</div>
-
-        <h3>
-          У бизнеса есть Instagram.
-          Есть карты.
-          Есть хорошие услуги.
-        </h3>
-
-        <p>
-          Но клиент всё равно открывает сайт конкурента,
-          потому что там сразу видит цены, услуги,
-          фотографии, адрес и кнопку связи.
-        </p>
-
-      </div>
-
-      <div class="problem-list reveal">
-
-        <div class="problem-item">
-          <span>01</span>
-          <p>Нет собственного сайта</p>
-        </div>
-
-        <div class="problem-item">
-          <span>02</span>
-          <p>Старый и неудобный сайт</p>
-        </div>
-
-        <div class="problem-item">
-          <span>03</span>
-          <p>С телефона всё выглядит плохо</p>
-        </div>
-
-        <div class="problem-item active">
-          <span>→</span>
-          <p>
-            Делаем понятный сайт,
-            который ведёт клиента к заявке.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= SERVICES ================= -->
-
-<section class="section services" id="services">
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <span class="eyebrow">УСЛУГИ</span>
-
-      <h2>
-        Не просто сайт.
-        <span>Решение задачи.</span>
-      </h2>
-
-      <p>
-        Выбираем формат исходя из того,
-        что именно должен получить бизнес.
-      </p>
-
-    </div>
-
-    <div class="services-grid">
-
-      <article class="service-card reveal">
-
-        <div class="service-number">01</div>
-
-        <div class="service-icon">◈</div>
-
-        <h3>Сайт-визитка</h3>
-
-        <p>
-          Современная страница с услугами,
-          преимуществами, фотографиями,
-          контактами и кнопками связи.
-        </p>
-
-        <ul>
-          <li>Адаптация под телефон</li>
-          <li>Услуги и цены</li>
-          <li>Карта и контакты</li>
-          <li>WhatsApp / звонок</li>
-        </ul>
-
-        <a href="#contacts">
-          Обсудить →
-        </a>
-
-      </article>
-
-      <article class="service-card featured reveal">
-
-        <div class="popular">
-          ПОПУЛЯРНЫЙ
-        </div>
-
-        <div class="service-number">02</div>
-
-        <div class="service-icon">↗</div>
-
-        <h3>Лендинг</h3>
-
-        <p>
-          Страница, построенная вокруг одного
-          предложения и одного действия —
-          заявки, записи или покупки.
-        </p>
-
-        <ul>
-          <li>Сильный первый экран</li>
-          <li>УТП и преимущества</li>
-          <li>Отзывы и доверие</li>
-          <li>Призывы к действию</li>
-        </ul>
-
-        <a href="#contacts">
-          Обсудить →
-        </a>
-
-      </article>
-
-      <article class="service-card reveal">
-
-        <div class="service-number">03</div>
-
-        <div class="service-icon">⌘</div>
-
-        <h3>Редизайн</h3>
-
-        <p>
-          Если сайт уже существует, но выглядит
-          устаревшим или плохо работает —
-          улучшим его.
-        </p>
-
-        <ul>
-          <li>Новый дизайн</li>
-          <li>Мобильная версия</li>
-          <li>Улучшение структуры</li>
-          <li>Оптимизация</li>
-        </ul>
-
-        <a href="#contacts">
-          Обсудить →
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-  <div class="container stats-grid">
-
-    <div class="stat reveal">
-      <strong data-counter="100">0</strong><span>%</span>
-      <p>личного участия</p>
-    </div>
-
-    <div class="stat reveal">
-      <strong data-counter="3">0</strong>
-      <p>технологии</p>
-    </div>
-
-    <div class="stat reveal">
-      <strong data-counter="24">0</strong><span>ч</span>
-      <p>ориентир ответа</p>
-    </div>
-
-    <div class="stat reveal">
-      <strong>320</strong><span>px</span>
-      <p>минимальная ширина</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= WORK ================= -->
-
-<section class="section work" id="work">
-
-  <div class="container">
-
-    <div class="section-heading split reveal">
-
-      <div>
-
-        <span class="eyebrow">ПОРТФОЛИО</span>
-
-        <h2>
-          Работа говорит
-          <span>лучше слов.</span>
-        </h2>
-
-      </div>
-
-      <p>
-        Несколько проектов, которые показывают,
-        как я подхожу к дизайну и разработке.
-      </p>
-
-    </div>
-
-    <div class="projects">
-
-      <a
-        href="https://rasulovking2577.github.io/BARBERSHOP/"
-        target="_blank"
-        rel="noopener"
-        class="project project-large reveal">
-
-        <div class="project-image barber-image">
-
-          <div class="project-overlay">
-
-            <span>ОТКРЫТЬ ПРОЕКТ</span>
-
-            <strong>↗</strong>
-
-          </div>
-
-        </div>
-
-        <div class="project-info">
-
-          <div>
-            <small>01 / WEBSITE</small>
-
-            <h3>ЦЕХЪ — Барбершоп</h3>
-
-          </div>
-
-          <p>
-            Сайт для барбершопа
-            с услугами, мастерами,
-            галереей и записью.
-          </p>
-
-        </div>
-
-      </a>
-
-      <div class="project project-mini reveal">
-
-        <div class="mini-project-visual">
-
-          <span>&lt;/&gt;</span>
-
-        </div>
-
-        <div class="project-info">
-
-          <div>
-            <small>02 / PORTFOLIO</small>
-            <h3>1САЙТ</h3>
-          </div>
-
-          <p>
-            Личный сайт студии
-            и портфолио разработчика.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="project project-mini open-project reveal">
-
-        <div class="mini-project-visual">
-          <span>+</span>
-        </div>
-
-        <div class="project-info">
-
-          <div>
-            <small>03 / YOUR BUSINESS</small>
-            <h3>Следующий проект — ваш?</h3>
-          </div>
-
-          <p>
-            Здесь может появиться
-            ваш бизнес.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= PROCESS ================= -->
-
-<section class="section process" id="process">
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <span class="eyebrow">ПРОЦЕСС</span>
-
-      <h2>
-        От идеи
-        <span>до рабочей ссылки.</span>
-      </h2>
-
-    </div>
-
-    <div class="process-grid">
-
-      <div class="process-card reveal">
-
-        <span>01</span>
-
-        <h3>Заявка</h3>
-
-        <p>
-          Рассказываете, чем занимаетесь
-          и что хотите получить.
-        </p>
-
-      </div>
-
-      <div class="process-card reveal">
-
-        <span>02</span>
-
-        <h3>Задача</h3>
-
-        <p>
-          Определяем цель сайта,
-          аудиторию и структуру.
-        </p>
-
-      </div>
-
-      <div class="process-card reveal">
-
-        <span>03</span>
-
-        <h3>Дизайн</h3>
-
-        <p>
-          Собираем визуальный стиль
-          и ключевые экраны.
-        </p>
-
-      </div>
-
-      <div class="process-card reveal">
-
-        <span>04</span>
-
-        <h3>Разработка</h3>
-
-        <p>
-          Пишу HTML, CSS и JavaScript
-          и собираю всё в рабочий сайт.
-        </p>
-
-      </div>
-
-      <div class="process-card reveal">
-
-        <span>05</span>
-
-        <h3>Проверка</h3>
-
-        <p>
-          Проверяем телефон,
-          компьютер и разные экраны.
-        </p>
-
-      </div>
-
-      <div class="process-card reveal">
-
-        <span>06</span>
-
-        <h3>Запуск</h3>
-
-        <p>
-          Получаете готовую ссылку
-          и сайт выходит в интернет.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= WHY ================= -->
-
-<section class="section why">
-
-  <div class="container">
-
-    <div class="why-box reveal">
-
-      <div class="why-left">
-
-        <span class="eyebrow">ПОЧЕМУ 1САЙТ</span>
-
-        <h2>
-          Маленькая студия.
-          <span>Большое внимание
-          к деталям.</span>
-        </h2>
-
-      </div>
-
-      <div class="why-right">
-
-        <div class="why-row">
-          <span>01</span>
-          <div>
-            <h3>Без посредников</h3>
-            <p>
-              Вы общаетесь непосредственно
-              с разработчиком.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-row">
-          <span>02</span>
-          <div>
-            <h3>Под конкретный бизнес</h3>
-            <p>
-              Не копирую один шаблон
-              для всех клиентов.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-row">
-          <span>03</span>
-          <div>
-            <h3>Мобильная версия</h3>
-            <p>
-              Сайт должен хорошо выглядеть
-              там, где его открывает клиент.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-row">
-          <span>04</span>
-          <div>
-            <h3>Чистый код</h3>
-            <p>
-              HTML, CSS и JavaScript
-              без ненужного перегруза.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= FAQ ================= -->
-
-<section class="section faq" id="faq">
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <span class="eyebrow">FAQ</span>
-
-      <h2>
-        Остались
-        <span>вопросы?</span>
-      </h2>
-
-    </div>
-
-    <div class="faq-list">
-
-      <details class="faq-item reveal">
-
-        <summary>
-          Сколько стоит сайт?
-          <span>+</span>
-        </summary>
-
-        <p>
-          Стоимость зависит от задачи, количества
-          блоков и необходимых функций. После
-          короткого обсуждения я называю конкретную
-          стоимость до начала работы.
-        </p>
-
-      </details>
-
-      <details class="faq-item reveal">
-
-        <summary>
-          Сколько времени занимает разработка?
-          <span>+</span>
-        </summary>
-
-        <p>
-          Простой сайт можно сделать за несколько
-          дней. Более сложный проект занимает больше
-          времени. Срок согласовываем заранее.
-        </p>
-
-      </details>
-
-      <details class="faq-item reveal">
-
-        <summary>
-          Можно ли сделать сайт для моего бизнеса?
-          <span>+</span>
-        </summary>
-
-        <p>
-          Да. Сайт можно разработать для кафе,
-          салона, барбершопа, мастерской, специалиста,
-          магазина и других небольших бизнесов.
-        </p>
-
-      </details>
-
-      <details class="faq-item reveal">
-
-        <summary>
-          Сайт будет работать на телефоне?
-          <span>+</span>
-        </summary>
-
-        <p>
-          Да. Адаптивная версия входит в разработку.
-          Сайт проверяется на разных размерах экранов.
-        </p>
-
-      </details>
-
-      <details class="faq-item reveal">
-
-        <summary>
-          Что если у меня уже есть сайт?
-          <span>+</span>
-        </summary>
-
-        <p>
-          Можно сделать редизайн, улучшить мобильную
-          версию, структуру, скорость и отдельные
-          блоки без полного создания сайта с нуля.
-        </p>
-
-      </details>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contacts">
-
-  <div class="contact-grid-bg"></div>
-
-  <div class="container">
-
-    <div class="contact-box reveal">
-
-      <span class="eyebrow">КОНТАКТЫ</span>
-
-      <h2>
-        Есть идея?
-        <span>Давайте сделаем.</span>
-      </h2>
-
-      <p>
-        Напишите, чем занимается ваш бизнес
-        и какой сайт вам нужен. Я отвечу
-        и предложу подходящий вариант.
-      </p>
-
-      <div class="contact-buttons">
-
-        <a
-          href="https://wa.me/79696656414"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary btn-large magnetic">
-
-          WhatsApp
-          <span>↗</span>
-
-        </a>
-
-        <a
-          href="tel:+79696656414"
-          class="btn btn-outline btn-large">
-
-          +7 969 665-64-14
-
-        </a>
-
-      </div>
-
-      <div class="contact-note">
-        Обычно отвечаю в течение дня.
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-  <div class="container footer-grid">
-
-    <a href="#home" class="brand">
-
-      <span class="brand-mark">1</span>
-      <span>САЙТ</span>
-
+    <a class="work reveal" href="https://rasulovking2577.github.io/BARBERSHOP/" target="_blank" rel="noopener">
+      <div class="k">Барбершоп</div>
+      <h3>ЦЕХЪ</h3>
+      <p>Услуги, мастера, запись онлайн.</p>
+      <div class="go">Открыть →</div>
     </a>
-
-    <p>
-      Современные сайты для бизнеса.
-    </p>
-
-    <a href="tel:+79696656414">
-      +7 969 665-64-14
+    <a class="work reveal" href="https://rasulovking2577.github.io/Aragvi/" target="_blank" rel="noopener">
+      <div class="k">Кузовной ремонт</div>
+      <h3>RIHTOVKA.MHK</h3>
+      <p>Оценка по фото, WhatsApp, Instagram работ.</p>
+      <div class="go">Открыть →</div>
     </a>
-
+    <a class="work reveal" href="https://rasulovking2577.github.io/fatima/" target="_blank" rel="noopener">
+      <div class="k">Магазин одежды</div>
+      <h3>Fatima Pakhrudinova</h3>
+      <p>Каталог исламской женской одежды, заказ в WhatsApp.</p>
+      <div class="go">Открыть →</div>
+    </a>
+    <a class="work reveal" href="https://rasulovking2577.github.io/1site/" target="_blank" rel="noopener">
+      <div class="k">Студия</div>
+      <h3>1САЙТ</h3>
+      <p>Сайт студии: услуги, цены, квиз, портфолио.</p>
+      <div class="go">Открыть →</div>
+    </a>
   </div>
+</section>
 
-  <div class="container footer-bottom">
-
-    <span>
-      © 2026 1САЙТ
-    </span>
-
-    <span>
-      Махачкала · Россия
-    </span>
-
+<section class="sec wrap">
+  <h2 class="reveal">Что делаю</h2>
+  <p class="s reveal">Под задачу бизнеса</p>
+  <div class="grid3">
+    <div class="card reveal"><h3>Визитка</h3><p>Одна страница: услуги, адрес, WhatsApp. Чтобы вас находили и писали.</p></div>
+    <div class="card reveal"><h3>Каталог</h3><p>Товары или услуги с кнопкой заказа. Клиент выбирает и пишет вам.</p></div>
+    <div class="card reveal"><h3>Лендинг</h3><p>Под одну цель: заявка, запись, звонок. Структура под продажу.</p></div>
   </div>
+</section>
 
+<section class="sec wrap">
+  <h2 class="reveal">Как работаем</h2>
+  <p class="s reveal">Коротко</p>
+  <div class="grid3">
+    <div class="card reveal"><h3>1. Задача</h3><p>Что за бизнес, кому сайт, какой результат нужен.</p></div>
+    <div class="card reveal"><h3>2. Сборка</h3><p>Дизайн и вёрстка. Показываю, правям.</p></div>
+    <div class="card reveal"><h3>3. Запуск</h3><p>На ваш домен, WhatsApp, помощь с публикацией.</p></div>
+  </div>
+</section>
+
+<section class="final wrap">
+  <h2 class="reveal">Нужен сайт?</h2>
+  <p class="reveal">Напишите в WhatsApp — обсудим формат и цену</p>
+  <a class="btn btn-m reveal" href="https://wa.me/79696656414?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BD%D1%83%D0%B6%D0%B5%D0%BD%20%D1%81%D0%B0%D0%B9%D1%82" target="_blank" rel="noopener">Написать в WhatsApp</a>
+  <p class="reveal" style="margin-top:14px;font-size:.9rem"><a href="https://rasulovking2577.github.io/1site/" style="color:#fff">Подробнее на 1site →</a></p>
+</section>
+
+<footer class="wrap">
+  <span>1САЙТ · Махачкала</span>
+  <span>Расул</span>
 </footer>
-
-<script src="script.js" defer></script>
-
+<div class="sticky"><a class="btn btn-m" href="https://wa.me/79696656414?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5" target="_blank" rel="noopener">Обсудить проект</a></div>
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
